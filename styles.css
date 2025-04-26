@@ -1,0 +1,295 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Drawer Styles */
+/* Drawer Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Drawer Styles */
+.drawer {
+    height: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(129, 129, 241);
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    padding-top: 3rem;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform .4s ease-in-out;
+}
+
+.drawer.open {
+    display: flex;
+    height: 100vh;
+    animation: slideIn .4s ease-in-out forwards;
+}
+
+.drawer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.drawer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.header-info {
+    text-align: center;
+}
+
+.drawer-details {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-item h4 {
+    font-weight: 600;
+}
+
+.download-btn {
+    background-color: #01875f;
+    color: white;
+    padding: 0.7rem 3rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #006043;
+}
+
+.image-scroll {
+    display: flex;
+    overflow-x: auto;
+    /* flex-wrap: wrap; */
+    gap: .1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.image-item {
+    width: 190px;
+    height: 350px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.close-drawer-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 0.7rem 3rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .drawer-content {
+        padding: 1rem;
+    }
+
+    .drawer-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .download-btn,
+    .close-drawer-btn {
+        width: 100%;
+    }
+
+    .image-item {
+        width: 150px;
+        height: 300px;
+    }
+
+
+
+}
+
+
+
+.container {
+    padding: 1rem;
+  }
+  
+  /* Header Styles */
+  .header h2 {
+    font-weight: 700;
+    color: #282828;
+    text-align: center;
+  }
+  
+  /* Loan Section Styles */
+  .loan-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  
+  /* Card Styles */
+  .loan-type-card {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    width: 47%;
+    height: 10.5rem;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loan-type-card .icon {
+    background-color: #f1f4f7;
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .loan-type-card .icon img {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .loan-type-card h3 {
+    font-weight: 700;
+    color: #282828;
+    margin-bottom: 0.5rem;
+  }
+  
+  .loan-type-card .button {
+    color: red;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* View All Button */
+  .view-all {
+    color: red;
+    font-size: 14px;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  /* Image Styling */
+  .interest-image {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .interest-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .loan-type-card {
+      width: 100%;
+    }
+    
+    .header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .loan-section {
+      flex-direction: column;
+    }
+  
+    .interest-image img {
+      width: 100%;
+    }
+  }
+
+
+  /* Ensuring the container takes up full width and height */
+.footer-image-container {
+    width: 100%;
+    overflow: hidden; /* Prevents overflow */
+  }
+  
+  /* Ensuring the image scales responsively */
+  .footer-image-container img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+  }
+  
+  /* Optional: If you want to limit the height on large screens */
+  @media (min-width: 768px) {
+    .footer-image-container img {
+      height: 300px; /* Adjust as needed */
+      object-fit: cover; /* Keeps the image fully covering the area without distortion */
+    }
+  }
+  
+  /* Optional: Mobile responsiveness */
+  @media (max-width: 768px) {
+    .footer-image-container img {
+      height: auto; /* Let the height adjust on small screens */
+      object-fit: cover; /* Ensures the image doesn't overflow */
+    }
+  }
+  
+
+
+
+
+
