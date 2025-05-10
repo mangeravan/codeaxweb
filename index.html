@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fraudulent Site Warning</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #FF0000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .warning-container {
+      background-color:#FF0000;
+      padding: 40px;
+      border: 4px solid #ff0000;
+      border-radius: 12px;
+      box-shadow: 0 0 25px red;
+      max-width: 600px;
+    }
+
+    .warning-icon {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #fffff;
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #cc0000;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="warning-container">
+    <div class="warning-icon">🛑</div>
+    <h1>Warning: Fraudulent Website Detected</h1>
+    <p>
+      This website has been flagged for suspicious or fraudulent activity.<br />
+      It may attempt to steal your personal, financial, or login information.<br />
+      For your safety, please leave this site immediately.
+    </p>
+    <a href="" class="btn">Go Back to Safety</a>
+  </div>
+</body>
+</html>
